@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>欢迎访问 hreshhao.com - 个人作品集</title>
+
+    <style>
+
+        :root {
+
+            --primary-color: #3498db;
+
+            --secondary-color: #2ecc71;
+
+            --accent-color: #e74c3c;
+
+            --dark-color: #2c3e50;
+
+            --light-color: #ecf0f1;
+
+        }
+
+        
+
+        body {
+
+            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+
+            background-color: var(--light-color);
+
+            color: var(--dark-color);
+
+            margin: 0;
+
+            padding: 0;
+
+            line-height: 1.6;
+
+        }
+
+        
+
+        header {
+
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+
+            color: white;
+
+            padding: 40px 0;
+
+            text-align: center;
+
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+        }
+
+        
+
+        h1 {
+
+            font-size: 2.8em;
+
+            margin: 0;
+
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+
+        }
+
+        
+
+        .subtitle {
+
+            font-size: 1.4em;
+
+            margin-top: 10px;
+
+            opacity: 0.9;
+
+        }
+
+        
+
+        .content {
+
+            margin: 50px auto;
+
+            width: 90%;
+
+            max-width: 1200px;
+
+            text-align: center;
+
+        }
+
+        
+
+        .intro {
+
+            margin-bottom: 50px;
+
+            font-size: 1.2em;
+
+        }
+
+        
+
+        .projects {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+            gap: 30px;
+
+            margin-top: 40px;
+
+        }
+
+        
+
+        .project-card {
+
+            background-color: white;
+
+            border-radius: 10px;
+
+            padding: 25px;
+
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            text-align: left;
+
+        }
+
+        
+
+        .project-card:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+
+        }
+
+        
+
+        .project-card h3 {
+
+            color: var(--primary-color);
+
+            margin-top: 0;
+
+            font-size: 1.5em;
+
+            border-bottom: 2px solid var(--secondary-color);
+
+            padding-bottom: 10px;
+
+        }
+
+        
+
+        .project-card p {
+
+            color: #555;
+
+        }
+
+        
+
+        .project-card .tag {
+
+            display: inline-block;
+
+            background-color: var(--light-color);
+
+            color: var(--dark-color);
+
+            padding: 5px 10px;
+
+            border-radius: 20px;
+
+            font-size: 0.8em;
+
+            margin-right: 5px;
+
+            margin-bottom: 5px;
+
+        }
+
+        
+
+        .project-card .cta {
+
+            display: inline-block;
+
+            background-color: var(--primary-color);
+
+            color: white;
+
+            padding: 10px 20px;
+
+            border-radius: 5px;
+
+            text-decoration: none;
+
+            margin-top: 15px;
+
+            transition: background-color 0.3s;
+
+        }
+
+        
+
+        .project-card .cta:hover {
+
+            background-color: var(--secondary-color);
+
+        }
+
+        
+
+        .coming-soon {
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+        
+
+        .coming-soon::after {
+
+            content: "即将上线";
+
+            position: absolute;
+
+            top: 20px;
+
+            right: -35px;
+
+            background-color: var(--accent-color);
+
+            color: white;
+
+            padding: 5px 40px;
+
+            transform: rotate(45deg);
+
+            font-size: 0.8em;
+
+        }
+
+        
+
+        footer {
+
+            background-color: var(--dark-color);
+
+            color: white;
+
+            padding: 20px 0;
+
+            text-align: center;
+
+        }
+
+        
+
+        .visitor-count {
+
+            margin-top: 10px;
+
+            font-size: 0.9em;
+
+            color: #aaa;
+
+        }
+
+        
+
+        footer a {
+
+            color: var(--secondary-color);
+
+            text-decoration: none;
+
+            transition: color 0.3s;
+
+        }
+
+        
+
+        footer a:hover {
+
+            color: var(--primary-color);
+
+            text-decoration: underline;
+
+        }
+
+        
+
+        @media (max-width: 768px) {
+
+            .projects {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            
+
+            h1 {
+
+                font-size: 2em;
+
+            }
+
+            
+
+            .subtitle {
+
+                font-size: 1.1em;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>hreshhao.com</h1>
+
+        <div class="subtitle">创意与技术的交汇点</div>
+
+    </header>
+
+
+
+    <div class="content">
+
+        <div class="intro">
+
+            <p>欢迎来到我的个人作品集！这里展示了我在编程和创意领域的一些项目。</p>
+
+            <p>无论是实用工具还是有趣的网页应用，我都希望能为用户带来价值和乐趣。</p>
+
+        </div>
+
+
+
+        <div class="projects">
+
+            <div class="project-card">
+
+                <h3>个人技术博客</h3>
+
+                <p>分享我在编程和技术领域的心得体会、学习笔记和实践经验。</p>
+
+                <div>
+
+                    <span class="tag">后端开发</span>
+
+                    <span class="tag">技术分享</span>
+
+                    <span class="tag">编程教程</span>
+
+                </div>
+
+                <a href="https://juejin.cn/user/2664871918047063" class="cta" target="_blank">访问博客</a>
+
+            </div>
+
+            
+
+            <div class="project-card">
+
+                <h3>通辽宇宙知识库</h3>
+
+                <p>基于B站UP主"小约翰可汗"视频内容的互动知识平台，提供世界地图和地理数据可视化。</p>
+
+                <div>
+
+                    <span class="tag">Vue 3</span>
+
+                    <span class="tag">数据可视化</span>
+
+                    <span class="tag">全栈开发</span>
+
+                </div>
+
+                <a href="https://www.tongliaouniverse.cn/" class="cta" target="_blank">探索知识库</a>
+
+            </div>
+
+            
+
+            <div class="project-card">
+
+                <h3>烟花模拟器</h3>
+
+                <p>一个互动性强的网页应用，让您随时随地都能欣赏绚丽的烟花表演。放松心情，享受视觉盛宴！</p>
+
+                <div>
+
+                    <span class="tag">Canvas</span>
+
+                    <span class="tag">动画效果</span>
+
+                    <span class="tag">互动体验</span>
+
+                </div>
+
+                <a href="https://www.hreshhao.com/fireworks/" class="cta" target="_blank">放烟花</a>
+
+            </div>
+
+            
+
+            <div class="project-card">
+
+                <h3>flomo插件</h3>
+
+                <p>为知名笔记工具flomo打造的增强插件，提升您的笔记体验和效率。</p>
+
+                <div>
+
+                    <span class="tag">生产力工具</span>
+
+                    <span class="tag">浏览器插件</span>
+
+                    <span class="tag">笔记应用</span>
+
+                </div>
+
+                <a href="https://hreshhao.org/" class="cta" target="_blank">了解更多</a>
+
+            </div>
+
+            
+
+            <div class="project-card coming-soon">
+
+                <h3>点餐小程序</h3>
+
+                <p>便捷高效的点餐解决方案，为餐厅和顾客提供流畅的点餐体验。</p>
+
+                <div>
+
+                    <span class="tag">微信小程序</span>
+
+                    <span class="tag">餐饮服务</span>
+
+                    <span class="tag">用户体验</span>
+
+                </div>
+
+                <a href="#" class="cta" style="background-color: #999; cursor: not-allowed;">敬请期待</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <footer>
+
+        <p>&copy; 2025 hreshhao.com | <a href="/privacy-policy">隐私政策</a> | <a href="/terms-of-service">服务条款</a></p>
+
+        <div class="visitor-count">
+
+            <span id="busuanzi_container_site_pv">总访问量：<span id="busuanzi_value_site_pv"></span>次</span> | 
+
+            <span id="busuanzi_container_site_uv">访客数：<span id="busuanzi_value_site_uv"></span>人</span>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- 不蒜子计数器 -->
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+</body>
+
+</html>
