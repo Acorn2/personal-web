@@ -6,11 +6,13 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>欢迎访问 hreshhao.com - 个人作品集</title>
+
+    <meta name="theme-color" content="#3498db">
 
     <style>
 
@@ -54,11 +56,39 @@
 
             color: white;
 
-            padding: 40px 0;
+            padding: 60px 0;
 
-            text-align: center;
+            text-align: left;
 
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+        }
+
+        
+
+        .header-content {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            width: 90%;
+
+        }
+
+        
+
+        .header-text {
+
+            flex: 1;
+
+            padding-right: 30px;
 
         }
 
@@ -76,13 +106,293 @@
 
         
 
-        .subtitle {
+        .highlight {
+
+            color: #fff;
+
+            background: rgba(0,0,0,0.1);
+
+            padding: 0 10px;
+
+            border-radius: 4px;
+
+        }
+
+        
+
+        .tagline {
 
             font-size: 1.4em;
 
             margin-top: 10px;
 
             opacity: 0.9;
+
+        }
+
+        
+
+        .header-bio {
+
+            margin: 20px 0;
+
+        }
+
+        
+
+        .header-bio p {
+
+            margin: 8px 0;
+
+            font-size: 1.1em;
+
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+
+        }
+
+        
+
+        .header-actions {
+
+            display: flex;
+
+            gap: 15px;
+
+            margin-top: 25px;
+
+        }
+
+        
+
+        .primary-btn, .secondary-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            padding: 12px 24px;
+
+            border-radius: 50px;
+
+            text-decoration: none;
+
+            font-weight: 500;
+
+            transition: all 0.3s ease;
+
+        }
+
+        
+
+        .primary-btn {
+
+            background-color: white;
+
+            color: var(--primary-color);
+
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+        }
+
+        
+
+        .secondary-btn {
+
+            background-color: rgba(255,255,255,0.2);
+
+            color: white;
+
+            border: 1px solid rgba(255,255,255,0.4);
+
+        }
+
+        
+
+        .primary-btn:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+
+        }
+
+        
+
+        .secondary-btn:hover {
+
+            background-color: rgba(255,255,255,0.3);
+
+        }
+
+        
+
+        .btn-icon {
+
+            margin-right: 8px;
+
+        }
+
+        
+
+        .header-visual {
+
+            flex: 1;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            position: relative;
+
+            min-height: 300px;
+
+        }
+
+        
+
+        .tech-orbit {
+
+            position: relative;
+
+            width: 280px;
+
+            height: 280px;
+
+            border-radius: 50%;
+
+            border: 2px dashed rgba(255,255,255,0.3);
+
+            animation: rotate 30s linear infinite;
+
+        }
+
+        
+
+        .tech-item {
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 50%;
+
+            transform: translate(-50%, -50%) rotate(var(--rotation)) translateX(140px) rotate(calc(-1 * var(--rotation)));
+
+            background: white;
+
+            color: var(--primary-color);
+
+            width: 60px;
+
+            height: 60px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-weight: bold;
+
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+            transition: all 0.3s ease;
+
+        }
+
+        
+
+        .tech-item:hover {
+
+            transform: translate(-50%, -50%) rotate(var(--rotation)) translateX(140px) rotate(calc(-1 * var(--rotation))) scale(1.2);
+
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+
+        }
+
+        
+
+        @keyframes rotate {
+
+            from { transform: rotate(0deg); }
+
+            to { transform: rotate(360deg); }
+
+        }
+
+        
+
+        @media (max-width: 900px) {
+
+            .header-content {
+
+                flex-direction: column;
+
+                text-align: center;
+
+            }
+
+            
+
+            .header-text {
+
+                padding-right: 0;
+
+                margin-bottom: 30px;
+
+            }
+
+            
+
+            .header-actions {
+
+                justify-content: center;
+
+            }
+
+            
+
+            .header-visual {
+
+                min-height: 200px;
+
+            }
+
+            
+
+            .tech-orbit {
+
+                width: 200px;
+
+                height: 200px;
+
+            }
+
+            
+
+            .tech-item {
+
+                transform: translate(-50%, -50%) rotate(var(--rotation)) translateX(100px) rotate(calc(-1 * var(--rotation)));
+
+                width: 50px;
+
+                height: 50px;
+
+                font-size: 0.9em;
+
+            }
+
+            
+
+            .tech-item:hover {
+
+                transform: translate(-50%, -50%) rotate(var(--rotation)) translateX(100px) rotate(calc(-1 * var(--rotation))) scale(1.2);
+
+            }
 
         }
 
@@ -105,6 +415,258 @@
         .intro {
 
             margin-bottom: 50px;
+
+            font-size: 1.2em;
+
+        }
+
+        
+
+        .profile {
+
+            background-color: white;
+
+            border-radius: 10px;
+
+            padding: 30px;
+
+            margin-bottom: 40px;
+
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+
+            text-align: left;
+
+        }
+
+        
+
+        .profile h2 {
+
+            color: var(--primary-color);
+
+            border-bottom: 2px solid var(--secondary-color);
+
+            padding-bottom: 10px;
+
+            margin-top: 0;
+
+            text-align: center;
+
+            margin-bottom: 30px;
+
+        }
+
+        
+
+        .journey-timeline {
+
+            position: relative;
+
+            padding-left: 30px;
+
+        }
+
+        
+
+        .journey-timeline::before {
+
+            content: '';
+
+            position: absolute;
+
+            left: 10px;
+
+            top: 0;
+
+            height: 100%;
+
+            width: 2px;
+
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+
+        }
+
+        
+
+        .timeline-item {
+
+            position: relative;
+
+            margin-bottom: 40px;
+
+        }
+
+        
+
+        .timeline-item:last-child {
+
+            margin-bottom: 0;
+
+        }
+
+        
+
+        .timeline-dot {
+
+            position: absolute;
+
+            left: -30px;
+
+            top: 0;
+
+            width: 20px;
+
+            height: 20px;
+
+            border-radius: 50%;
+
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+
+            box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
+
+        }
+
+        
+
+        .timeline-content {
+
+            background-color: rgba(255, 255, 255, 0.5);
+
+            border-radius: 8px;
+
+            padding: 20px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+            transition: transform 0.3s ease;
+
+        }
+
+        
+
+        .timeline-content:hover {
+
+            transform: translateY(-5px);
+
+        }
+
+        
+
+        .timeline-content h3 {
+
+            color: var(--primary-color);
+
+            margin-top: 0;
+
+            font-size: 1.3em;
+
+            border-bottom: 1px dashed var(--secondary-color);
+
+            padding-bottom: 8px;
+
+            margin-bottom: 15px;
+
+        }
+
+        
+
+        .timeline-content p {
+
+            margin: 8px 0;
+
+            font-size: 1.1em;
+
+        }
+
+        
+
+        .social-links {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+
+        }
+
+        
+
+        .tech-stack {
+
+            margin: 20px 0;
+
+        }
+
+        
+
+        .tech-tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 10px;
+
+        }
+
+        
+
+        .tech-tag {
+
+            background-color: var(--light-color);
+
+            color: var(--dark-color);
+
+            padding: 8px 15px;
+
+            border-radius: 20px;
+
+            font-weight: 500;
+
+        }
+
+        
+
+        .contact-links {
+
+            margin-top: 20px;
+
+        }
+
+        
+
+        .social-link {
+
+            text-decoration: none;
+
+            color: var(--primary-color);
+
+            transition: color 0.3s;
+
+            display: inline-flex;
+
+            align-items: center;
+
+        }
+
+        
+
+        .social-link:hover {
+
+            color: var(--secondary-color);
+
+            text-decoration: underline;
+
+        }
+
+        
+
+        .link-icon {
+
+            margin-right: 8px;
 
             font-size: 1.2em;
 
@@ -314,30 +876,139 @@
 
         @media (max-width: 768px) {
 
-            .projects {
-
-                grid-template-columns: 1fr;
-
+            header {
+                padding: 40px 0;
             }
-
             
-
-            h1 {
-
-                font-size: 2em;
-
+            .header-content {
+                flex-direction: column;
+                text-align: center;
             }
-
             
-
-            .subtitle {
-
+            .header-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+            
+            .header-bio p {
+                font-size: 1em;
+            }
+            
+            .header-actions {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .header-visual {
+                min-height: 180px;
+            }
+            
+            .tech-orbit {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .tech-item {
+                transform: translate(-50%, -50%) rotate(var(--rotation)) translateX(90px) rotate(calc(-1 * var(--rotation)));
+                width: 45px;
+                height: 45px;
+                font-size: 0.8em;
+            }
+            
+            .tech-item:hover {
+                transform: translate(-50%, -50%) rotate(var(--rotation)) translateX(90px) rotate(calc(-1 * var(--rotation))) scale(1.2);
+            }
+            
+            .content {
+                margin: 30px auto;
+            }
+            
+            .intro {
+                margin-bottom: 30px;
                 font-size: 1.1em;
-
             }
-
+            
+            .profile {
+                padding: 20px;
+            }
+            
+            .timeline-content p {
+                font-size: 1em;
+            }
+            
+            .projects {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .project-card {
+                padding: 20px;
+            }
+            
+            .project-card h3 {
+                font-size: 1.3em;
+            }
+            
+            html, body {
+                overflow-x: hidden;
+                width: 100%;
+            }
         }
-
+        
+        @media (max-width: 380px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .tagline {
+                font-size: 1em;
+            }
+            
+            .header-actions {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .primary-btn, .secondary-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .tech-orbit {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .tech-item {
+                transform: translate(-50%, -50%) rotate(var(--rotation)) translateX(75px) rotate(calc(-1 * var(--rotation)));
+                width: 40px;
+                height: 40px;
+                font-size: 0.7em;
+            }
+            
+            .tech-item:hover {
+                transform: translate(-50%, -50%) rotate(var(--rotation)) translateX(75px) rotate(calc(-1 * var(--rotation))) scale(1.2);
+            }
+        }
+        
+        .lazy-load {
+            transition: opacity 0.3s;
+            opacity: 0;
+        }
+        
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+        
+        .project-card .cta {
+            display: block;
+            text-align: center;
+            padding: 12px 20px;
+        }
+        
+        .social-link {
+            padding: 8px 0;
+        }
     </style>
 
 </head>
@@ -345,163 +1016,175 @@
 <body>
 
     <header>
-
-        <h1>hreshhao.com</h1>
-
-        <div class="subtitle">创意与技术的交汇点</div>
-
+        <div class="header-content">
+            <div class="header-text">
+                <h1>hresh | <span class="highlight">全栈独立开发者</span></h1>
+                <p class="tagline">创意与技术的交汇点</p>
+                <div class="header-bio">
+                    <p>👨‍💻 七年Java开发经验，专注AI应用开发与全栈项目实践</p>
+                    <p>🚀 独立完成多个全栈项目，涵盖Web应用、浏览器插件、小程序</p>
+                </div>
+                <div class="header-actions">
+                    <a href="https://github.com/Acorn2" target="_blank" class="primary-btn">
+                        <span class="btn-icon">💻</span>GitHub
+                    </a>
+                    <a href="https://juejin.cn/user/2664871918047063" target="_blank" class="secondary-btn">
+                        <span class="btn-icon">📝</span>掘金博客
+                    </a>
+                </div>
+            </div>
+            <div class="header-visual">
+                <div class="tech-orbit">
+                    <div class="tech-item" style="--rotation: 0deg"><span>Java</span></div>
+                    <div class="tech-item" style="--rotation: 60deg"><span>Vue</span></div>
+                    <div class="tech-item" style="--rotation: 120deg"><span>Python</span></div>
+                    <div class="tech-item" style="--rotation: 180deg"><span>Node.js</span></div>
+                    <div class="tech-item" style="--rotation: 240deg"><span>小程序</span></div>
+                    <div class="tech-item" style="--rotation: 300deg"><span>AI</span></div>
+                </div>
+            </div>
+        </div>
     </header>
 
-
-
     <div class="content">
-
         <div class="intro">
-
             <p>欢迎来到我的个人作品集！这里展示了我在编程和创意领域的一些项目。</p>
-
             <p>无论是实用工具还是有趣的网页应用，我都希望能为用户带来价值和乐趣。</p>
-
         </div>
 
-
+        <div class="profile">
+            <h2>我的技术之旅</h2>
+            <div class="journey-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>技术探索方向</h3>
+                        <p>🔍 AIGC应用开发：探索AI与传统应用的融合路径</p>
+                        <p>🌐 全栈开发实践：从需求分析到产品设计，再到技术实现的全流程把控</p>
+                        <p>📊 数据处理与可视化：研究数据采集、处理与直观展示的技术方案</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>开发环境与工具</h3>
+                        <p>💻 编辑器：Cursor</p>
+                        <p>🤖 AI助手：Claude、Deepseek、Gemini、GPT</p>
+                        <p>🛠️ 其他工具：Python数据处理、Docker容器化部署</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>关注我</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/Acorn2" target="_blank" class="social-link">
+                                <span class="link-icon">💻</span> GitHub：@Acorn2
+                            </a>
+                            <a href="https://juejin.cn/user/2664871918047063" target="_blank" class="social-link">
+                                <span class="link-icon">📝</span> 掘金博客：hresh
+                            </a>
+                            <div class="social-link">
+                                <span class="link-icon">📱</span> 微信公众号：hresh
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="projects">
-
             <div class="project-card">
-
                 <h3>个人技术博客</h3>
-
                 <p>分享我在编程和技术领域的心得体会、学习笔记和实践经验。</p>
-
                 <div>
-
                     <span class="tag">后端开发</span>
-
                     <span class="tag">技术分享</span>
-
                     <span class="tag">编程教程</span>
-
                 </div>
-
                 <a href="https://juejin.cn/user/2664871918047063" class="cta" target="_blank">访问博客</a>
-
             </div>
-
             
-
             <div class="project-card">
-
                 <h3>通辽宇宙知识库</h3>
-
                 <p>基于B站UP主"小约翰可汗"视频内容的互动知识平台，提供世界地图和地理数据可视化。</p>
-
                 <div>
-
                     <span class="tag">Vue 3</span>
-
                     <span class="tag">数据可视化</span>
-
                     <span class="tag">全栈开发</span>
-
                 </div>
-
                 <a href="https://www.tongliaouniverse.cn/" class="cta" target="_blank">探索知识库</a>
-
             </div>
-
             
-
             <div class="project-card">
-
                 <h3>烟花模拟器</h3>
-
                 <p>一个互动性强的网页应用，让您随时随地都能欣赏绚丽的烟花表演。放松心情，享受视觉盛宴！</p>
-
                 <div>
-
                     <span class="tag">Canvas</span>
-
                     <span class="tag">动画效果</span>
-
                     <span class="tag">互动体验</span>
-
                 </div>
-
                 <a href="https://www.hreshhao.com/fireworks/" class="cta" target="_blank">放烟花</a>
-
             </div>
-
             
-
             <div class="project-card">
-
                 <h3>flomo插件</h3>
-
                 <p>为知名笔记工具flomo打造的增强插件，提升您的笔记体验和效率。</p>
-
                 <div>
-
                     <span class="tag">生产力工具</span>
-
                     <span class="tag">浏览器插件</span>
-
                     <span class="tag">笔记应用</span>
-
                 </div>
-
                 <a href="https://hreshhao.org/" class="cta" target="_blank">了解更多</a>
-
             </div>
-
             
-
             <div class="project-card coming-soon">
-
                 <h3>点餐小程序</h3>
-
                 <p>便捷高效的点餐解决方案，为餐厅和顾客提供流畅的点餐体验。</p>
-
                 <div>
-
                     <span class="tag">微信小程序</span>
-
                     <span class="tag">餐饮服务</span>
-
                     <span class="tag">用户体验</span>
-
                 </div>
-
                 <a href="#" class="cta" style="background-color: #999; cursor: not-allowed;">敬请期待</a>
-
             </div>
-
         </div>
-
     </div>
 
-
-
     <footer>
-
         <p>&copy; 2025 hreshhao.com | <a href="/privacy-policy">隐私政策</a> | <a href="/terms-of-service">服务条款</a></p>
-
         <div class="visitor-count">
-
             <span id="busuanzi_container_site_pv">总访问量：<span id="busuanzi_value_site_pv"></span>次</span> | 
-
             <span id="busuanzi_container_site_uv">访客数：<span id="busuanzi_value_site_uv"></span>人</span>
-
         </div>
-
     </footer>
 
-
-
-    <!-- 不蒜子计数器 -->
-
     <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var lazyImages = [].slice.call(document.querySelectorAll('.lazy-load'));
+            
+            if ('IntersectionObserver' in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.classList.add('loaded');
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
+            
+            document.addEventListener('touchstart', function() {}, false);
+        });
+    </script>
 </body>
 
 </html>
